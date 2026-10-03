@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "GrillVibes Rider",
+    "slug": "grillvibes-rider",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#fff7ed",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.grillvibes.rider"
+    },
+    "android": {
+      "package": "com.grillvibes.rider",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "extra": {
+      "apiBaseUrl": "http://127.0.0.1:8000/api"
+    }
+  }
+}
