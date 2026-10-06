@@ -5,27 +5,33 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "splash": {
-      "backgroundColor": "#fff7ed",
-      "resizeMode": "contain"
-    },
+    "newArchEnabled": true,
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.grillvibes.rider"
+      "bundleIdentifier": "com.infinicode.grillvibes",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "GrillVibes uses your location to update active delivery tracking and navigation."
+      }
     },
     "android": {
-      "package": "com.grillvibes.rider",
+      "package": "com.infinicode.grillvibes",
       "permissions": [
         "CAMERA",
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION"
       ]
     },
+    "plugins": [
+      "@maplibre/maplibre-react-native"
+    ],
     "extra": {
-      "apiBaseUrl": "http://127.0.0.1:8000/api"
+      "apiBaseUrl": "https://grillvibes.space/api",
+      "eas": {
+        "projectId": "ef4d26a1-be2e-41d5-936a-ffeaf0efcfd6"
+      }
     }
   }
 }

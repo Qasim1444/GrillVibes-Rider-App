@@ -11,21 +11,28 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
-    "expo": "^57.0.0",
+    "@maplibre/maplibre-react-native": "^11.4.1",
+    "@types/react": "~19.2.4",
+    "expo": "~57.0.26",
     "expo-asset": "~57.0.16",
-    "expo-constants": "~57.0.17",
+    "expo-constants": "~57.0.20",
+    "expo-font": "57.0.4",
     "expo-image-picker": "~57.0.15",
     "expo-linking": "~57.0.9",
+    "expo-location": "~57.0.20",
     "expo-notifications": "~57.0.21",
     "expo-secure-store": "~57.0.3",
     "expo-status-bar": "~57.0.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.3",
-    "react-native-web": "^0.21.2"
+    "react-native-web": "^0.21.2",
+    "typescript": "~6.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
-    "babel-preset-expo": "~57.0.0"
+    "@types/react": "~19.2.4",
+    "babel-preset-expo": "~57.0.0",
+    "typescript": "~6.0.3"
   }
 }

@@ -1,6 +1,7 @@
 node_modules/
 .expo/
 dist/
+tmp-expo-modules-core/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

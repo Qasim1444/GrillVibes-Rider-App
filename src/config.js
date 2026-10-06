@@ -1,7 +1,4 @@
-import Constants from "expo-constants";
-
-export const API_BASE_URL =
-  Constants.expoConfig?.extra?.apiBaseUrl || "http://127.0.0.1:8000/api";
+export const API_BASE_URL = "https://grillvibes.space/api";
 
 export const TOKEN_KEY = "grillvibes_rider_token";
 export const ONBOARDED_KEY = "grillvibes_rider_onboarded";
