@@ -91,6 +91,11 @@ export default function App() {
     setRoute({ name: "tabs" });
   }
 
+  function changeTab(nextTab) {
+    setTab(nextTab);
+    setRoute({ name: "tabs" });
+  }
+
   async function quickAccept(orderId) {
     try {
       await apiRequest(`/rider/orders/${orderId}/accept`, { token: session.token, method: "POST" });
@@ -145,7 +150,7 @@ export default function App() {
           onOpenOrder={(orderId) => setRoute({ name: "detail", orderId })}
           onQuickAccept={quickAccept}
           onOpenNotifications={() => setRoute({ name: "notifications" })}
-          onChangeTab={setTab}
+          onChangeTab={changeTab}
           onLogout={logout}
         />
       ) : tab === "earnings" ? (
@@ -153,11 +158,16 @@ export default function App() {
       ) : tab === "map" ? (
         <TrackingScreen token={session.token} />
       ) : tab === "profile" ? (
-        <ProfileScreen token={session.token} onLogout={logout} />
+        <ProfileScreen
+          token={session.token}
+          onLogout={logout}
+          onChangeTab={changeTab}
+          onOpenNotifications={() => setRoute({ name: "notifications" })}
+        />
       ) : (
         <HistoryScreen token={session.token} />
       )}
-      <BottomTabs active={tab} onChange={setTab} />
+      <BottomTabs active={tab} onChange={changeTab} />
     </View>
   );
 }

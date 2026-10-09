@@ -6,7 +6,7 @@ import { apiRequest, unwrap } from "../api/client";
 import { AppButton, TopBar } from "../components/ui";
 import { styles } from "../styles";
 
-export function ProfileScreen({ token, onLogout }) {
+export function ProfileScreen({ token, onLogout, onChangeTab, onOpenNotifications }) {
   const [profile, setProfile] = useState({});
   const [available, setAvailable] = useState(false);
 
@@ -49,9 +49,9 @@ export function ProfileScreen({ token, onLogout }) {
           </Pressable>
         </View>
         <SettingsRow icon="person-outline" label="My Profile" valueText={profile.email || ""} />
-        <SettingsRow icon="cash-outline" label="Earnings" />
-        <SettingsRow icon="receipt-outline" label="Delivery History" />
-        <SettingsRow icon="notifications-outline" label="Notifications" />
+        <SettingsRow icon="cash-outline" label="Earnings" onPress={() => onChangeTab?.("earnings")} />
+        <SettingsRow icon="receipt-outline" label="Delivery History" onPress={() => onChangeTab?.("history")} />
+        <SettingsRow icon="notifications-outline" label="Notifications" onPress={onOpenNotifications} />
         <AppButton outline icon="log-out-outline" onPress={onLogout}>Logout</AppButton>
       </ScrollView>
     </SafeAreaView>
